@@ -1,0 +1,206 @@
+MODULES = [
+    {
+        "id": 1,
+        "title": "What is Cortex Code?",
+        "description": "Understand what CoCo is, why it matters for AEs, and how it fits alongside SnowWork, Intelligence, and Raven.",
+        "duration_min": 10,
+        "icon": ":material/lightbulb:",
+        "lessons": [
+            {
+                "id": 1,
+                "title": "CoCo in 4 minutes",
+                "duration_min": 4,
+                "hook": "You're 10 minutes before a customer call. You need account consumption data, the latest competitive intel on Databricks, and a refreshed talk track. Most AEs spend 30+ minutes gathering this across Salesforce, Slack, and Google Docs. With CoCo, it takes 90 seconds.",
+                "content": [
+                    ("What is Cortex Code?", "Snowflake's AI-powered coding agent — built for Snowflake data workflows. Not a chatbot. Not a generic LLM wrapper."),
+                    ("Data-aware, not just code-aware", "CoCo reads your actual Snowflake environment: catalogs, schemas, semantic models, query history. Outputs are grounded in your data, not generic knowledge."),
+                    ("For AEs specifically", "CoCo Desktop is your research assistant, writing partner, and data analyst rolled into one. No engineering background needed."),
+                    ("Proven results", "Evolv saved 500 hours in 20 days (~$100K value in month one). Internally, CoCo uses 48% fewer tool calls and ~50% fewer steps than competing agents."),
+                    ("How to access", "CoCo Desktop is available for internal AE productivity. Install via go/cortex-cli and connect to your Snowflake account."),
+                ],
+                "pro_tip": "If you've been using ChatGPT for deal prep, imagine the same speed but grounded in your actual account data. That's CoCo.",
+            },
+            {
+                "id": 2,
+                "title": "CoCo vs. SnowWork vs. Intelligence vs. Raven",
+                "duration_min": 5,
+                "hook": "You have five AI-powered tools available to you. Picking the right one saves time. Picking the wrong one wastes it. Here's your 5-minute decision guide.",
+                "content": [
+                    ("CoCo Desktop", "Internal productivity — multi-step research, drafting, data analysis. Best for pre-meeting deep-dives pulling consumption + contacts + competitive intel."),
+                    ("CoCo CLI", "Customer demos and technical workflows. The ONLY CoCo version approved for showing to customers (per management guidance)."),
+                    ("SnowWork", "AI-assisted work within Snowsight — quick queries, notebook assistance. Best for quick data checks during a call."),
+                    ("Snowflake Intelligence", "Curated, governed data exploration for business users. Best for customer-facing scenarios where you help a data leader explore their own data."),
+                    ("Raven", "Quick account lookups — ARR, pipeline, ownership, org chart. Best for fast answers to specific account questions."),
+                ],
+                "pro_tip": "Rule of thumb: Raven for quick lookups, SnowWork for in-Snowsight tasks, Intelligence for customer-facing exploration, CoCo for everything that needs depth, data, and multi-step reasoning.",
+            },
+        ],
+    },
+    {
+        "id": 2,
+        "title": "Account research & meeting prep",
+        "description": "Execute multi-step account research workflows — combining account summaries, competitive intel, contact intelligence, and product usage in a single CoCo session.",
+        "duration_min": 12,
+        "icon": ":material/search:",
+        "lessons": [
+            {
+                "id": 3,
+                "title": "Pre-meeting prep in 5 minutes",
+                "duration_min": 5,
+                "hook": "You have a QBR with Acme Corp in 30 minutes. Here's how to walk in fully prepared using CoCo — 4 prompts, 5 minutes.",
+                "content": [
+                    ("Step 1: Start broad", 'Prompt: `"brief me on [Account Name]"`\n\nPulls ARR, consumption trends, account team, recent activity from Snowflake data.'),
+                    ("Step 2: Layer contacts", 'Prompt: `"pull contact intelligence for [Account]"`\n\nSurfaces key contacts, hiring signals, recent org changes.'),
+                    ("Step 3: Competitive landscape", 'Prompt: `"what\'s their tech stack?"`\n\nReveals tools in use, competitive displacement opportunities.'),
+                    ("Step 4: Whitespace", 'Prompt: `"show me product usage for [Account]"`\n\nShows which Snowflake features they use and where expansion areas exist.'),
+                ],
+                "pro_tip": "Chain prompts in one session rather than restarting. CoCo carries context forward, producing richer outputs with each step.",
+            },
+            {
+                "id": 4,
+                "title": "Competitive intel & use case discovery",
+                "duration_min": 4,
+                "hook": "Your customer just mentioned they're evaluating Databricks. Here's how to get battle-ready in 3 minutes.",
+                "content": [
+                    ("Competitive positioning", 'Prompt: `"competitive positioning against Databricks for governance and cost"`\n\nCoCo searches the Sales Knowledge Assistant (50K+ indexed chunks of battlecards, case studies, competitive decks).'),
+                    ("What you get back", "Key differentiators, objection responses, customer quotes you can reference — all from curated internal sources, not generic internet results."),
+                    ("Use case discovery", 'Prompt: `"use case prep for [Account Name]"`\n\nPulls recommended next-best use cases based on the account\'s current usage and industry.'),
+                    ("Source verification", "CoCo cites sources (Seismic links, Confluence pages) so you can verify and share materials with confidence."),
+                ],
+                "pro_tip": 'Ask follow-up questions like "give me a talk track for the governance angle" to get conversation-ready phrasing.',
+            },
+        ],
+    },
+    {
+        "id": 3,
+        "title": "Customer communications",
+        "description": "Draft, refine, and send polished customer communications — from follow-up emails to executive briefs — using CoCo's data grounding and prompt iteration.",
+        "duration_min": 9,
+        "icon": ":material/edit_note:",
+        "lessons": [
+            {
+                "id": 5,
+                "title": "Draft, refine, send",
+                "duration_min": 5,
+                "hook": "You just finished a discovery call. The customer asked about Iceberg Tables and mentioned a Databricks POC. Here's how to send a killer follow-up in 5 minutes.",
+                "content": [
+                    ("Draft", 'Prompt: `"I just had a discovery call with [Account]. They\'re interested in Iceberg Tables and evaluating Databricks. Draft a follow-up email summarizing what we discussed and positioning our Iceberg capabilities vs. Databricks Delta Lake."`'),
+                    ("Refine", 'Prompt: `"Make it shorter, more executive-friendly, and add a customer quote from a similar use case"`\n\nCoCo pulls real customer quotes from internal knowledge.'),
+                    ("Polish", 'Prompt: `"Add a specific next step — offer a 30-minute technical deep-dive with their data engineering lead"`\n\n3 rounds = polished, data-grounded email in under 4 minutes.'),
+                    ("The S.C.O.P.E. technique", "**S**pecific (account name, topic), **C**ontext (what happened), **O**utput (email format), **P**erson (audience), **E**vidence (customer quotes, data points). Specificity = quality."),
+                ],
+                "pro_tip": "Three prompts: draft, refine, polish. Compare that to 20 minutes staring at a blank email.",
+            },
+            {
+                "id": 6,
+                "title": "Executive briefs & stakeholder prep",
+                "duration_min": 4,
+                "hook": "Your RVP asks for a one-page brief on your top 3 accounts by tomorrow morning. Here's how to do all three in 15 minutes.",
+                "content": [
+                    ("Generate the brief", 'Prompt: `"generate account plan for [Account Name]"`\n\nProduces a comprehensive account plan with consumption, use cases, competitive landscape, and recommendations.'),
+                    ("Customize for your audience", 'Prompt: `"Reformat this as 3 bullet points for my RVP — focus on expansion opportunity and risk to renewal"`\n\nCoCo restructures the output for the right audience.'),
+                    ("Multi-account in one session", "Do a second account in the same session — CoCo maintains context and can compare accounts if asked."),
+                    ("Add deal context", 'Combine with Raven: `"what\'s the pipeline for [Account]?"` to layer deal data into the brief.'),
+                ],
+                "pro_tip": "Executive briefs used to take an hour of Salesforce digging and slide formatting. Now it's one prompt and a refinement.",
+            },
+        ],
+    },
+    {
+        "id": 4,
+        "title": "Building your daily CoCo workflow",
+        "description": "Design a personal daily workflow that integrates CoCo into your morning prep, meeting rhythm, and weekly planning.",
+        "duration_min": 7,
+        "icon": ":material/calendar_today:",
+        "lessons": [
+            {
+                "id": 7,
+                "title": "Your CoCo day",
+                "duration_min": 5,
+                "hook": "The AEs getting the most from CoCo aren't using it for one big task — they're using it 5-10 times a day for small ones. Here's what a CoCo-powered day looks like.",
+                "content": [
+                    ("Morning (15 min)", '`"brief me on my top 3 accounts"` (CoCo Desktop)\n`"What\'s the ARR for [Account]?"` (Raven)\n`"any recent changes at [Account]?"` (CoCo Desktop)'),
+                    ("Pre-meeting (5 min each)", '`"prep me for [Account]"` (CoCo Desktop)\nQuick data check mid-call: navigate in Snowsight (SnowWork)'),
+                    ("Post-meeting (5 min)", '`"Draft follow-up for [Account] — we discussed X, Y, Z"` (CoCo Desktop)\n`"Summarize meeting notes for my team on [Account]"` (CoCo Desktop)'),
+                    ("Weekly (30 min)", '`"Show me my pipeline by stage"` (Raven)\n`"generate account plan for [Account]"` (CoCo Desktop)\n`"latest competitive intel on [Competitor]"` (CoCo Desktop)'),
+                    ("The habit loop", "Start with ONE workflow — morning prep or post-meeting follow-up. Use it for a week. Then add another. That's how CoCo becomes your daily co-pilot."),
+                ],
+                "pro_tip": "If you find yourself repeating the same 3 prompts before every QBR, that's a skill waiting to be built. Talk to your SE or Enablement team.",
+            },
+        ],
+    },
+]
+
+TOTAL_LESSONS = sum(len(m["lessons"]) for m in MODULES)
+TOTAL_DURATION = sum(m["duration_min"] for m in MODULES)
+
+
+PROMPT_LIBRARY = [
+    {"category": "Morning prep", "prompt": '"brief me on my top 3 accounts"', "tool": "CoCo Desktop", "description": "Pulls account summaries with ARR, consumption trends, recent activity for your top accounts"},
+    {"category": "Morning prep", "prompt": '"any recent changes at [Account Name]?"', "tool": "CoCo Desktop", "description": "Surfaces org changes, hiring signals, news for a specific account"},
+    {"category": "Morning prep", "prompt": '"What\'s the ARR for [Account Name]?"', "tool": "Raven", "description": "Quick ARR lookup for a specific account"},
+    {"category": "Meeting prep", "prompt": '"prep me for [Account Name]"', "tool": "CoCo Desktop", "description": "Full account deep-dive with contacts, competitive landscape, recent Snowflake usage"},
+    {"category": "Meeting prep", "prompt": '"pull contact intelligence for [Account Name]"', "tool": "CoCo Desktop", "description": "Key contacts, hiring signals, org changes for a specific account"},
+    {"category": "Meeting prep", "prompt": '"what\'s their tech stack?"', "tool": "CoCo Desktop", "description": "Tools and platforms in use at the account, displacement opportunities"},
+    {"category": "Meeting prep", "prompt": '"show me product usage for [Account Name]"', "tool": "CoCo Desktop", "description": "Which Snowflake features the account uses and where whitespace exists"},
+    {"category": "Competitive", "prompt": '"competitive positioning against [Competitor] for [Topic]"', "tool": "CoCo Desktop", "description": "Battlecard-level talking points from Sales Knowledge Assistant (50K+ indexed chunks)"},
+    {"category": "Competitive", "prompt": '"give me a talk track for the [Topic] angle"', "tool": "CoCo Desktop", "description": "Conversation-ready phrasing for a specific competitive angle"},
+    {"category": "Competitive", "prompt": '"use case prep for [Account Name]"', "tool": "CoCo Desktop", "description": "Recommended next-best use cases based on account usage and industry"},
+    {"category": "Follow-up", "prompt": '"Draft follow-up for [Account] — we discussed X, Y, Z"', "tool": "CoCo Desktop", "description": "Data-grounded follow-up email based on meeting context"},
+    {"category": "Follow-up", "prompt": '"Make it shorter, more executive-friendly, and add a customer quote"', "tool": "CoCo Desktop", "description": "Iterate on a draft — specify audience, focus, and constraints"},
+    {"category": "Follow-up", "prompt": '"Summarize meeting notes for my team on [Account]"', "tool": "CoCo Desktop", "description": "Internal summary of a customer conversation for your team"},
+    {"category": "Account plans", "prompt": '"generate account plan for [Account Name]"', "tool": "CoCo Desktop", "description": "Comprehensive account plan with consumption, use cases, competitive landscape, recommendations"},
+    {"category": "Account plans", "prompt": '"Reformat this as 3 bullet points for my RVP"', "tool": "CoCo Desktop", "description": "Restructure output for executive consumption"},
+    {"category": "Account plans", "prompt": '"Show me my pipeline by stage"', "tool": "Raven", "description": "Pipeline overview organized by deal stage"},
+    {"category": "Executive briefs", "prompt": '"Write a 3-paragraph status update for my VP on [Account] — include key risks and next steps"', "tool": "CoCo Desktop", "description": "Structured status update with cited data points"},
+    {"category": "Executive briefs", "prompt": '"latest competitive intel on [Competitor]"', "tool": "CoCo Desktop", "description": "Recent competitive updates and positioning from internal sources"},
+]
+
+
+TOOL_DATA = [
+    {
+        "name": "CoCo Desktop",
+        "icon": ":material/computer:",
+        "best_for": "Internal productivity — multi-step research, drafting, data analysis",
+        "example": "Pre-meeting account deep-dive pulling consumption + contacts + competitive intel",
+        "audience": "Internal only",
+        "depth": "Deep — multi-step, context-carrying workflows",
+        "tasks": ["Account research", "Customer comms", "Competitive intel", "Executive briefs", "Meeting prep", "Follow-up emails"],
+    },
+    {
+        "name": "CoCo CLI",
+        "icon": ":material/terminal:",
+        "best_for": "Customer demos, technical workflows, building agents and pipelines",
+        "example": "Live demo showing a customer how CoCo builds a data pipeline in conversation",
+        "audience": "Customer-facing (approved for demos)",
+        "depth": "Deep — full coding agent capabilities",
+        "tasks": ["Customer demos", "Pipeline building", "Agent development", "Technical POCs"],
+    },
+    {
+        "name": "SnowWork",
+        "icon": ":material/cloud:",
+        "best_for": "AI-assisted work within Snowsight — quick queries, notebook assistance",
+        "example": "Quick data check during a call: 'Show me this account's top 3 workloads'",
+        "audience": "Internal (Snowsight users)",
+        "depth": "Medium — single-task, in-context assistance",
+        "tasks": ["Quick data checks", "Notebook help", "SQL assistance", "In-Snowsight exploration"],
+    },
+    {
+        "name": "Snowflake Intelligence",
+        "icon": ":material/psychology:",
+        "best_for": "Curated, governed data exploration for business users",
+        "example": "Help a data leader explore their own data with natural language",
+        "audience": "Customer-facing",
+        "depth": "Medium — guided, governed exploration",
+        "tasks": ["Customer data exploration", "Business user queries", "Governed insights"],
+    },
+    {
+        "name": "Raven",
+        "icon": ":material/bolt:",
+        "best_for": "Quick account lookups — ARR, pipeline, ownership, org chart",
+        "example": "Who owns this account? What's their ARR? Show me the org chart.",
+        "audience": "Internal only",
+        "depth": "Shallow — fast, single-answer lookups",
+        "tasks": ["ARR lookup", "Pipeline check", "Account ownership", "Org chart", "Quick stats"],
+    },
+]
